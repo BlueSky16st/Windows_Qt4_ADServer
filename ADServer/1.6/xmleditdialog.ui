@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XMLEditDialog</class>
+ <widget class="QDialog" name="XMLEditDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>548</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>编辑</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="2">
+    <widget class="QTreeWidget" name="sceneTreeWidget">
+     <property name="editTriggers">
+      <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::EditKeyPressed</set>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>浏览</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QWidget" name="adTypeWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="typeLayout">
+        <item>
+         <widget class="QLabel" name="adTypeLabel">
+          <property name="text">
+           <string>节目类型</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="adTypeComboBox">
+          <item>
+           <property name="text">
+            <string>文本</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>图片</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>视频</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QStackedWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="adNameLabel">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>广告名称(&amp;N)</string>
+         </property>
+         <property name="buddy">
+          <cstring>adNameLineEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="adNameLineEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="beginTimeLabel">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>开始时间(&amp;B)</string>
+         </property>
+         <property name="buddy">
+          <cstring>beginTimeEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QTimeEdit" name="beginTimeEdit"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="endTimeLabel">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>结束时间(&amp;E)</string>
+         </property>
+         <property name="buddy">
+          <cstring>endTimeEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QTimeEdit" name="endTimeEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="intervalLabel">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>时间间隔(&amp;T)</string>
+         </property>
+         <property name="buddy">
+          <cstring>intervalSpinBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="intervalSpinBox">
+         <property name="maximum">
+          <number>60</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="pathLabel">
+         <property name="text">
+          <string>路径(&amp;P)</string>
+         </property>
+         <property name="buddy">
+          <cstring>filePathLineEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="browseLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="filePathLineEdit"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="browseFileButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="text">
+            <string notr="true">...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="0">
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="textLabel">
+         <property name="text">
+          <string>文本(&amp;T)</string>
+         </property>
+         <property name="buddy">
+          <cstring>textEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="webLabel">
+         <property name="text">
+          <string>网页(&amp;W)</string>
+         </property>
+         <property name="buddy">
+          <cstring>textEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="webLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="OKButton">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>保存(&amp;S)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>sceneTreeWidget</tabstop>
+  <tabstop>adTypeComboBox</tabstop>
+  <tabstop>adNameLineEdit</tabstop>
+  <tabstop>beginTimeEdit</tabstop>
+  <tabstop>endTimeEdit</tabstop>
+  <tabstop>intervalSpinBox</tabstop>
+  <tabstop>OKButton</tabstop>
+  <tabstop>filePathLineEdit</tabstop>
+  <tabstop>browseFileButton</tabstop>
+  <tabstop>textEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
