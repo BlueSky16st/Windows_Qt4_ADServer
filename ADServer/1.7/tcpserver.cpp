@@ -63,10 +63,15 @@ void TCPServer::cilentDisconnected()
 }
 
 /*
- * 私有函数
- * 客户端断开连接时，更新客户端连接数。
- * 
-*/
+ *  函数名：incomingConnection
+ *  函数类型：私有函数
+ *  时间：2016/11/19 11:24:39
+ *  功能：有客户端连接时，将客户端分配到线程中。
+ *  
+ *  参数列表
+ *	    参数1：客户端标识
+ *  
+ */
 void TCPServer::incomingConnection(int socketId)
 {
 	int minThread = 0;
